@@ -1,5 +1,22 @@
 # Dracula for [tmux](https://github.com/tmux/tmux/wiki)
 
+## My personal fork
+The only diference this has from the original repo is that it opens the colors for configuration by adding the settings:
+
+- @dracula-white
+- @dracula-gray
+- @dracula-dark_gray
+- @dracula-light_purple
+- @dracula-dark_purple
+- @dracula-cyan
+- @dracula-green
+- @dracula-orange
+- @dracula-red
+- @dracula-pink
+- @dracula-yellow
+
+which all can be setting using colors hex code
+
 > A dark theme for [tmux](https://github.com/tmux/tmux/wiki)
 
 ![Screenshot](./screenshot.png)
