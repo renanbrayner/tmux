@@ -26,18 +26,18 @@ main()
   show_refresh=$(get_tmux_option "@dracula-refresh-rate" 5)
   IFS=' ' read -r -a plugins <<< $(get_tmux_option "@dracula-plugins" "battery network weather")
 
-  # Dracula Color Pallette
-  white='#f8f8f2'
-  gray='#44475a'
-  dark_gray='#282a36'
-  light_purple='#bd93f9'
-  dark_purple='#6272a4'
-  cyan='#8be9fd'
-  green='#50fa7b'
-  orange='#ffb86c'
-  red='#ff5555'
-  pink='#ff79c6'
-  yellow='#f1fa8c'
+  # Dracula Color Pallette By Default
+  white=$(get_tmux_option "@dracula-white" '#f8f8f2')
+  gray=$(get_tmux_option "@dracula-gray" '#44475a')
+  dark_gray=$(get_tmux_option "@dracula-dark_gray" '#282a36')
+  light_purple=$(get_tmux_option "@dracula-light_purple" '#bd93f9')
+  dark_purple=$(get_tmux_option "@dracula-dark_purple" '#6272a4')
+  cyan=$(get_tmux_option "@dracula-cyan" '#8be9fd')
+  green=$(get_tmux_option "@dracula-green" '#50fa7b')
+  orange=$(get_tmux_option "@dracula-orange" '#ffb86c')
+  red=$(get_tmux_option "@dracula-red" '#ff5555')
+  pink=$(get_tmux_option "@dracula-pink" '#ff79c6')
+  yellow=$(get_tmux_option "@dracula-yellow" '#f1fa8c')
 
   # Handle left icon configuration
   case $show_left_icon in
@@ -129,7 +129,7 @@ main()
 
     if [ $plugin = "git" ]; then
       IFS=' ' read -r -a colors  <<< $(get_tmux_option "@dracula-git-colors" "green dark_gray")
-        script="#($current_dir/git.sh)"     
+      script="#($current_dir/git.sh)"
     fi
 
     if [ $plugin = "battery" ]; then
